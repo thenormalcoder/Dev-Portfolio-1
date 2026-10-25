@@ -89,8 +89,11 @@ function CertificateMarquee() {
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
-  // Render the list twice so the -50% translate loops seamlessly
-  const loop = reduced ? certificateImages : [...certificateImages, ...certificateImages];
+  // Repeat short lists so each half of the track is wider than the screen,
+  // then render it twice so the -50% translate loops seamlessly
+  const reps = Math.ceil(8 / certificateImages.length);
+  const half = Array.from({ length: reps }, () => certificateImages).flat();
+  const loop = reduced ? certificateImages : [...half, ...half];
 
   return (
     <>

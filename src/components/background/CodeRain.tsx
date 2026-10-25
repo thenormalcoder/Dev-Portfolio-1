@@ -1,37 +1,43 @@
 import { useEffect, useRef } from "react";
 import usePageVisible from "@/hooks/usePageVisible";
 
+/** Words that fall in the background, one per column. */
 const GLYPH_TOKENS = [
-  "NestJS",
-  "RAG",
-  "OCPP",
-  "AWS",
-  "Spring",
-  "MCP",
+  // Stack
   "React",
+  "TypeScript",
+  "NestJS",
+  "Spring Boot",
+  "React Native",
+  "AWS",
+  "Docker",
+  "Terraform",
+  "Pinecone",
   "LangGraph",
-  "vector",
-  "embed",
-  "agent",
+  "MCP",
+  "OCPP",
+  // AI
+  "RAG",
+  "agents",
+  "embeddings",
+  "vectors",
+  "LLM",
   "prompt",
-  "tensor",
-  "neural",
   "fine-tune",
-  "transformer",
-  "tokenize",
   "inference",
-  "pipeline",
-  "scalar",
-  "0x1F",
+  "tokens",
+  "transformer",
+  // Code
+  "const",
   "async",
   "await",
-  "const",
   "lambda",
-  "gradient",
-  "softmax",
-  "epoch",
-  "loss",
-  "weights",
+  "return",
+  "import",
+  "export",
+  "=>",
+  "{ }",
+  "git push",
 ];
 
 interface Column {
@@ -141,8 +147,9 @@ export default function CodeRain() {
 
         const color = getColor();
 
+        // First letter on top so words read top-to-bottom; col.y is the falling (bottom) edge
         col.chars.forEach((ch, i) => {
-          const charY = col.y - i * 16;
+          const charY = col.y - (col.chars.length - 1 - i) * 16;
           if (charY < 0 || charY > h) return;
           const isLead = i === col.chars.length - 1;
           ctx.globalAlpha = col.alpha * (isLead ? opacities.lead : opacities.base);

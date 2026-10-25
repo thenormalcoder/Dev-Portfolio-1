@@ -275,11 +275,8 @@ export interface GalleryItem {
 export const gallery: GalleryItem[] = [
   { src: "/images/gallery/hackathon-finale.webp", alt: "Team photo at a hackathon grand finale" },
   { src: "/images/gallery/grand-finalist-trophy.webp", alt: "Grand Finalist trophy" },
-  { src: "/images/gallery/speaking.webp", alt: "Speaking at an event at NIT Manipur" },
   { src: "/images/gallery/unstop-director-badge.webp", alt: "Unstop Student Director badge" },
-  { src: "/images/gallery/kimo-winner.webp", alt: "Receiving a KIMO prize" },
   { src: "/images/gallery/unstop-swag.webp", alt: "Unstop swag kit" },
-  { src: "/images/gallery/freshers-meet.webp", alt: "Freshers' Meet 2022, NIT Manipur" },
 ];
 
 export interface CertificateImage {
@@ -292,9 +289,6 @@ export const certificateImages: CertificateImage[] = [
   { src: "/images/certificates/tata-imagination.webp", title: "National Semi-Finalist — Tata Imagination Challenge 2024" },
   { src: "/images/certificates/naukri-young-turks.webp", title: "Certificate of Merit — Naukri Campus Young Turks" },
   { src: "/images/certificates/google-cloud-skills-boost.webp", title: "Google Cloud Skills Boost badge" },
-  { src: "/images/certificates/careers360.webp", title: "Campus Ambassador — Careers360" },
-  { src: "/images/certificates/internshala-iit-delhi.webp", title: "Campus Ambassador selection — IIT Delhi Rendezvous (Internshala)" },
-  { src: "/images/certificates/internshala-marpu.webp", title: "HR Internship selection — Marpu Foundation (Internshala)" },
   { src: "/images/certificates/jsss-anmol-ratan.webp", title: "Anmol Ratan Award 2023 — Jiye Sindhi Seva Sangam" },
 ];
 
