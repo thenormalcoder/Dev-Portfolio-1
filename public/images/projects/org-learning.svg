@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="JetBrains Mono, monospace">
+  <defs>
+    <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+      <stop offset="0" stop-color="#f2b25c" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#0b0f14" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#5ec4b6"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#0b0f14"/>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+
+  <text x="80" y="110" fill="#9aa4b2" font-size="22">// org-learning-engine</text>
+  <text x="80" y="160" fill="#e8eaed" font-size="44" font-weight="700" font-family="Sora, sans-serif">Capture → Anonymise → Search</text>
+
+  <!-- pipeline -->
+  <g font-size="22">
+    <rect x="80" y="260" width="220" height="120" rx="18" fill="#121821" stroke="#f2b25c" stroke-width="2"/>
+    <text x="190" y="312" fill="#f2b25c" text-anchor="middle" font-weight="700">Slack</text>
+    <text x="190" y="348" fill="#9aa4b2" text-anchor="middle" font-size="18">/learn · &lt;10s</text>
+
+    <rect x="380" y="260" width="240" height="120" rx="18" fill="#121821" stroke="#232d3a" stroke-width="2"/>
+    <text x="500" y="312" fill="#e8eaed" text-anchor="middle" font-weight="700">Lifecycle</text>
+    <text x="500" y="348" fill="#9aa4b2" text-anchor="middle" font-size="18">draft→sandbox→commit</text>
+
+    <rect x="700" y="260" width="240" height="120" rx="18" fill="#121821" stroke="#232d3a" stroke-width="2"/>
+    <text x="820" y="312" fill="#e8eaed" text-anchor="middle" font-weight="700">Anonymise</text>
+    <text x="820" y="348" fill="#9aa4b2" text-anchor="middle" font-size="18">Presidio + LLM</text>
+
+    <rect x="1020" y="260" width="180" height="120" rx="18" fill="#121821" stroke="#5ec4b6" stroke-width="2"/>
+    <text x="1110" y="312" fill="#5ec4b6" text-anchor="middle" font-weight="700">Pinecone</text>
+    <text x="1110" y="348" fill="#9aa4b2" text-anchor="middle" font-size="18">vectors</text>
+
+    <path d="M300 320H372" stroke="#5ec4b6" stroke-width="3" marker-end="url(#a)"/>
+    <path d="M620 320H692" stroke="#5ec4b6" stroke-width="3" marker-end="url(#a)"/>
+    <path d="M940 320H1012" stroke="#5ec4b6" stroke-width="3" marker-end="url(#a)"/>
+
+    <!-- outputs -->
+    <path d="M1110 380V470H880" stroke="#5ec4b6" stroke-width="3" fill="none" marker-end="url(#a)"/>
+    <path d="M1110 470V560H880" stroke="#5ec4b6" stroke-width="3" fill="none" marker-end="url(#a)" stroke-dasharray="8 8"/>
+
+    <rect x="500" y="430" width="372" height="80" rx="16" fill="#18202b" stroke="#232d3a" stroke-width="2"/>
+    <text x="686" y="478" fill="#e8eaed" text-anchor="middle">RAG conversational search</text>
+
+    <rect x="500" y="530" width="372" height="80" rx="16" fill="#18202b" stroke="#232d3a" stroke-width="2"/>
+    <text x="686" y="578" fill="#e8eaed" text-anchor="middle">EventBridge daily digest</text>
+  </g>
+
+  <g font-size="20">
+    <rect x="80" y="440" width="380" height="170" rx="16" fill="#121821" stroke="#232d3a" stroke-width="2"/>
+    <text x="108" y="488" fill="#9aa4b2">$ trace --summary</text>
+    <text x="108" y="530" fill="#5ec4b6">✓ 3-layer PII scrub</text>
+    <text x="108" y="566" fill="#5ec4b6">✓ fully traced</text>
+    <text x="108" y="602" fill="#f2b25c">$0.013 / submission</text>
+  </g>
+</svg>

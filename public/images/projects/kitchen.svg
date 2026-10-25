@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="JetBrains Mono, monospace">
+  <defs>
+    <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+    <radialGradient id="glow" cx="35%" cy="55%" r="55%">
+      <stop offset="0" stop-color="#5ec4b6" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#0b0f14" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="#0b0f14"/>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+
+  <text x="80" y="110" fill="#9aa4b2" font-size="22">// ai-kitchen-auto-design</text>
+  <text x="80" y="160" fill="#e8eaed" font-size="44" font-weight="700" font-family="Sora, sans-serif">Prompt → Valid layouts</text>
+
+  <!-- floor plan: L-shaped kitchen -->
+  <g>
+    <rect x="80" y="220" width="560" height="420" rx="6" fill="#121821" stroke="#9aa4b2" stroke-width="3"/>
+    <!-- counters -->
+    <rect x="80" y="220" width="560" height="90" fill="#18202b" stroke="#232d3a" stroke-width="2"/>
+    <rect x="80" y="310" width="90" height="330" fill="#18202b" stroke="#232d3a" stroke-width="2"/>
+    <!-- cabinet divisions -->
+    <g stroke="#232d3a" stroke-width="2">
+      <path d="M190 220V310M300 220V310M410 220V310M520 220V310"/>
+      <path d="M80 420H170M80 530H170"/>
+    </g>
+    <!-- sink, hob, fridge -->
+    <rect x="320" y="240" width="70" height="50" rx="10" fill="none" stroke="#5ec4b6" stroke-width="3"/>
+    <text x="355" y="345" fill="#5ec4b6" font-size="18" text-anchor="middle">sink</text>
+    <g fill="none" stroke="#f2b25c" stroke-width="3">
+      <circle cx="113" cy="455" r="14"/><circle cx="143" cy="455" r="14"/>
+      <circle cx="113" cy="495" r="14"/><circle cx="143" cy="495" r="14"/>
+    </g>
+    <text x="190" y="480" fill="#f2b25c" font-size="18">hob</text>
+    <rect x="540" y="232" width="88" height="66" rx="6" fill="none" stroke="#e8eaed" stroke-width="3"/>
+    <text x="584" y="345" fill="#e8eaed" font-size="18" text-anchor="middle">fridge</text>
+    <!-- work triangle -->
+    <path d="M355 265L128 475L584 265Z" fill="#f2b25c" fill-opacity="0.08" stroke="#f2b25c" stroke-width="2" stroke-dasharray="10 8"/>
+    <!-- dimensions -->
+    <path d="M80 670H640" stroke="#9aa4b2" stroke-width="1.5"/>
+    <path d="M80 660V680M640 660V680" stroke="#9aa4b2" stroke-width="1.5"/>
+    <text x="360" y="700" fill="#9aa4b2" font-size="18" text-anchor="middle">3.6 m</text>
+  </g>
+
+  <!-- variant panel -->
+  <g font-size="20">
+    <rect x="720" y="220" width="480" height="420" rx="18" fill="#121821" stroke="#232d3a" stroke-width="2"/>
+    <text x="752" y="270" fill="#9aa4b2">$ rank --rules nkba</text>
+
+    <rect x="752" y="300" width="416" height="70" rx="12" fill="#18202b" stroke="#f2b25c" stroke-width="2"/>
+    <text x="776" y="344" fill="#f2b25c">#1  L-shape</text>
+    <text x="1144" y="344" fill="#5ec4b6" text-anchor="end">best</text>
+
+    <rect x="752" y="386" width="416" height="70" rx="12" fill="#18202b" stroke="#232d3a" stroke-width="2"/>
+    <text x="776" y="430" fill="#e8eaed">#2  U-shape</text>
+
+    <rect x="752" y="472" width="416" height="70" rx="12" fill="#18202b" stroke="#232d3a" stroke-width="2"/>
+    <text x="776" y="516" fill="#e8eaed">#3  I-shape</text>
+
+    <text x="752" y="596" fill="#5ec4b6">✓ no collisions · &lt;30s</text>
+  </g>
+</svg>

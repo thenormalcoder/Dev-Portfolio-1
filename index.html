@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Jatin Bhojwani — Software Developer</title>
+    <meta name="description" content="Jatin Bhojwani — Software Developer at Kickdrum. Builds production AI systems and cloud-native backends. NIT Manipur CSE, 9.19 CGPA." />
+    <meta property="og:title" content="Jatin Bhojwani — Software Developer" />
+    <meta property="og:description" content="Software Developer at Kickdrum. Builds production AI systems and cloud-native backends. NIT Manipur CSE, 9.19 CGPA." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jatin Bhojwani — Software Developer" />
+    <meta name="twitter:description" content="Software Developer at Kickdrum. Builds production AI systems and cloud-native backends." />
+    <meta name="twitter:image" content="/og-image.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600&family=Sora:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      // No-flash theme script — runs before React loads.
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+          var theme = stored || (prefersLight ? 'light' : 'dark');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jatin Bhojwani",
+        "jobTitle": "Software Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Kickdrum"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "National Institute of Technology Manipur"
+        },
+        "email": "mailto:jatinbhojwani@nitmanipur.ac.in",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bengaluru",
+          "addressCountry": "India"
+        },
+        "sameAs": []
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Hidden form so Netlify detects the contact form at build time (React renders the real one). -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+      <input name="bot-field" />
+    </form>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
